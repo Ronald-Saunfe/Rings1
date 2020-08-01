@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/Cddepmoney"
+                android:transitionName="Cddepmoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp"
+                android:clickable="true"
+                android:background="@android:color/white"
+                android:layout_marginTop="32dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/bgdeposit"
+                        android:transitionName="bgdeposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/yellow_bg"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_email_24"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginLeft="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/bgdeposit"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:id="@+id/txtdepositmenu"
+                        android:transitionName="txtdepositmenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deposit"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/bgdeposit"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deposit_details"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/txtdepositmenu"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:paddingBottom="16dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cmdepoitmoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="cmdepoitmoney"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                app:cardCornerRadius="4dp"
+                android:clickable="true"
+                app:cardElevation="2dp"
+                android:background="@android:color/white"
+                android:layout_marginTop="16dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/bgwithdraw"
+                        android:transitionName="bgwithdraw"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/withdraw_btn_bg"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_email_24"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginLeft="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/bgwithdraw"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:id="@+id/txtwithdrawmenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/withdraw"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/bgwithdraw"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/withdrawdesc"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/txtwithdrawmenu"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:paddingBottom="16dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="2dp"
+                android:clickable="true"
+                android:background="@android:color/white"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:id="@+id/bghelp"
+                        android:transitionName="bgdeposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/bghelp"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_email_24"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:layout_marginLeft="16dp"
+                        app:layout_constraintBottom_toBottomOf="@id/bghelp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:id="@+id/txthelpmenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deposit"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintTop_toBottomOf="@id/bghelp"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deposit_details"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@id/txthelpmenu"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        android:paddingBottom="16dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Part of the The Rings Project"
+                android:layout_marginTop="16dp"
+                android:alpha="0.63"
+                android:layout_marginBottom="16dp"/>
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="64dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appblmenu"
+        android:layout_width="match_parent"
+        android:layout_height="248dp"
+        android:background="@color/colorPrimary">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@android:color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="parallax"
+                android:layout_gravity="top"
+                android:layout_marginTop="16dp"
+                android:animateLayoutChanges="true">
+
+                <ImageView
+                    android:id="@+id/imgsmenu"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/rings"
+                    android:transitionName="img"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HI Ronald,"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintLeft_toRightOf="@id/imgsmenu"
+                    android:layout_marginLeft="32dp"
+                    app:layout_constraintTop_toTopOf="@id/imgsmenu"
+                    android:id="@+id/txtgreetings"
+                    />
+
+                <TextView
+                    android:id="@+id/txtwelcomemenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcomerings"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintLeft_toRightOf="@id/imgsmenu"
+                    android:layout_marginLeft="32dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtgreetings"/>
+
+                <ProgressBar
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/progressbmenu"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtwelcomemenu"
+                    android:layout_marginTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/txtmyrings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:text="@string/myring"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtwelcomemenu"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:id="@+id/rcvmyrings"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginTop="16dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintTop_toBottomOf="@id/txtmyrings"/>
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/shimmer_view"
+                    app:auto_start="true"
+                    app:duration="100"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/txtmyrings">
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <include layout="@layout/placeholdermyring" />
+                        <include layout="@layout/placeholdermyring" />
+                        <include layout="@layout/placeholdermyring" />
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:background="@android:color/white"
+                android:layout_gravity="bottom">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="kes 100.00"
+                        android:textColor="@color/colorAccent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your balance"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.leinardi.android.speeddial.SpeedDialOverlayLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.leinardi.android.speeddial.SpeedDialView
+        android:id="@+id/speedDial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="80dp"
+        app:sdOverlayLayout="@id/overlay"
+        android:layout_marginRight="8dp"
+        app:sdMainFabClosedSrc="@drawable/ic_baseline_more_horiz_24" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

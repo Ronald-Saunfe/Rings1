@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".joinring">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vwpg2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:background="@android:color/white">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_arrow_back_24"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/txtjoinr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:text="@string/Joinring"
+                        android:layout_marginRight="16dp"/>
+
+                    <View
+                        android:layout_width="32dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintRight_toRightOf="@id/txtjoinr"
+                        app:layout_constraintTop_toBottomOf="@id/txtjoinr"
+                        android:background="#18DC20"
+                        android:elevation="2dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:layout_gravity="bottom">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.kekstudio.dachshundtablayout.DachshundTabLayout
+                        android:id="@+id/tbl"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:tabIndicatorFullWidth="false"
+                        app:tabMode="scrollable"
+                        app:ddAnimatedIndicator="lineMove"
+                        app:ddIndicatorColor="#18DC20">
+                    </com.kekstudio.dachshundtablayout.DachshundTabLayout>
+
+                    <EditText
+                        android:id="@+id/Etsearchjr"
+                        android:layout_width="0dp"
+                        android:alpha="0"
+                        android:layout_height="32dp"
+                        android:paddingLeft="16dp"
+                        android:elevation="4dp"
+                        android:hint="@string/search"
+                        android:singleLine="true"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:visibility="gone"
+                        android:background="@drawable/search_join"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="64dp">
+                    </EditText>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

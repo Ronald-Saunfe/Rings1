@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".depositmoney"
+    android:transitionName="Cddepmoney"
+    android:background="@android:color/white">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/amount_dep"
+                    android:textAlignment="gravity"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="0.0"
+                    android:textAlignment="gravity"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btndepositmoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:backgroundTint="#FFC700"
+                        android:text="@string/depositaction"
+                        android:textColor="#404040"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <ProgressBar
+                        android:id="@+id/pgbdepositmoney"
+                        android:visibility="gone"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:elevation="4dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/btndepositmoney"
+                        app:layout_constraintBottom_toBottomOf="@id/btndepositmoney"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <include
+                    android:id="@+id/keypad"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    layout="@layout/keypad"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:background="@android:color/white">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@android:color/white"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    app:layout_collapseMode="parallax">
+
+                    <TextView
+                        android:id="@+id/txtfromdep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/from"
+                        android:textSize="14sp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/spnlaytdpm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spiner_bg"
+                        android:layout_marginLeft="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/txtfromdep"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="16dp">
+                        <Spinner
+                            android:id="@+id/spinnerdep"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/spnlaytdpm"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="top"
+                    app:contentInsetEnd="0dp"
+                    app:layout_collapseMode="pin">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_baseline_arrow_back_24"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txtdeposit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="16dp"
+                            android:text="@string/deposit"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            android:transitionName="txtdeposit"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/vwdep"
+                            android:layout_width="23dp"
+                            android:layout_height="3dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/yellow_bg"
+                            android:transitionName="bgdeposit"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintTop_toBottomOf="@id/txtdeposit"/>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

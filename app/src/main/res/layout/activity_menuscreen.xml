@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:transitionName="coodmenu"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menuscreen">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coodmenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/includeHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            layout="@layout/home" />
+
+        <include
+            android:id="@+id/includeprofile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            layout="@layout/profile" />
+
+        <include
+            android:id="@+id/includesettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            layout="@layout/settings" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav"
+        android:layout_gravity="bottom"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

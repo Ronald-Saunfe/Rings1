@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "683629530178",
+    "firebase_url": "https://rings-c715d.firebaseio.com",
+    "project_id": "rings-c715d",
+    "storage_bucket": "rings-c715d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683629530178:android:11daf3d273a24d76f9f1db",
+        "android_client_info": {
+          "package_name": "com.example.rings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683629530178-auqm0ff8ph6usagfld4l5n9tc473h1b8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rings",
+            "certificate_hash": "51ab696e51b9c292952cba3cecfca93498adf0cf"
+          }
+        },
+        {
+          "client_id": "683629530178-arguf08bo3k7somm09j3i053rpnjl7e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsEeWN3TXmTvOHa-F1YWfIyih_9S5GCEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683629530178-arguf08bo3k7somm09j3i053rpnjl7e2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

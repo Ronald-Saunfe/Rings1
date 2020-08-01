@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:id="@+id/cardmyringsmenu"
+    android:background="@android:color/white"
+    android:elevation="4dp"
+    app:shapeAppearance="@style/ShapeAppearance.App.MediumComponent"
+    app:contentPaddingLeft="0dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    card_view:cardUseCompatPadding="false"
+    app:contentPadding="0dp"
+    app:cardUseCompatPadding="false"
+    android:layout_marginBottom="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/myringcardstatus"
+            android:textSize="10sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/myringnamecard"
+            app:layout_constraintTop_toBottomOf="@id/myringcardstatus"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="8dp"
+            android:textSize="12sp"
+            android:textColor="@android:color/black"
+            />
+
+        <ImageButton
+            android:id="@+id/imgbtncardmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="8dp"/>
+
+        <ImageView
+            android:id="@+id/imgmyringcard"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@id/myringnamecard"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ProgressBar
+            android:id="@+id/pgbloadmyring"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgmyringcard"
+            app:layout_constraintBottom_toBottomOf="@id/imgmyringcard"/>
+
+        <View
+            android:id="@+id/bckdel"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#90FF0000"
+            android:visibility="gone"
+            android:layout_margin="-3dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/lnDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <ProgressBar
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="8dp"
+                android:elevation="4dp"
+                android:text="@string/deleting"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

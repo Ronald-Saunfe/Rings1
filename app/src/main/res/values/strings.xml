@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">Rings</string>
+
+    <string name="login">Login</string>
+    <string name="Username">Username</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="CPassword">Confirm Password</string>
+    <string name="Signupinstead">Create an account</string>
+    <string name="resetpassword">Reset Password</string>
+
+    <string name="Signup">Signup</string>
+    <string name="Logininstead">Login instead</string>
+    <string name="Iagree">I agree with the terms and conditions</string>
+
+    <string name="welcomerings">Welcome to Rings</string>
+
+    <string name="home">Home</string>
+    <string name="Profile">Profile</string>
+    <string name="Settings">Settings</string>
+
+
+    <string name="deposit">Deposit Money</string>
+    <string name="depositaction">Deposit</string>
+    <string name="deposit_details">enables you to join or create a ring</string>
+    <string name="withdraw">Withdraw Money</string>
+    <string name="withdrawaction">Deposit</string>
+    <string name="createRing">Create a Ring</string>
+    <string name="Joinring">Join Ring</string>
+
+    <string name="from">From</string>
+    <string-array name="paymentoptions">
+        <item>M-pesa</item>
+    </string-array>
+    <string name="amount_dep">Enter amount to deposit</string>
+
+    <string name="to">To</string>
+    <string name="withdrawdesc">Transfer money to your bank account</string>
+    <string name="amount_with">Enter amount to withdraw</string>
+
+    <string name="Createring">Create Ring</string>
+    <string name="Train">Train</string>
+
+    <string name="Create">Create</string>
+    <string name="name">Name</string>
+    <string name="details">Ring Detail</string>
+    <string name="pricetag">Price tag</string>
+    <string name="rule1">Players who earns more than the ring price tag exits the ring</string>
+    <string name="rules">Rules</string>
+
+    <string name="CheckNet">Check Internet Connection</string>
+    <string name="Tryagain">TRY AGAIN</string>
+
+    <string name="Or">or</string>
+    <string name="loginfailed">"Login failed check your email or password"</string>
+
+    <string name="backlogin">Back to login</string>
+
+    <string name="Edit">Edit</string>
+    <string name="Detail">Details</string>
+
+
+    <string name="JoinRing">Join a Ring</string>
+    <string name="national">National</string>
+    <string name="International">International</string>
+
+    <string-array name="ringsgroup">
+        <item>Search</item>
+        <item>National</item>
+        <item>International</item>
+    </string-array>
+
+    <string name="resetinstruction">Check the email address for reset code</string>
+    <string name="emailaddr">Email address</string>
+    <string name="sendresetc">Send reset link</string>
+
+    <string name="rule2">Players should be 10 m away from each other</string>
+    <string name="rule3">Players should be 1 km away from each other</string>
+    <string name="rule4">Players should be 10 km away from each other</string>
+
+    <string name="currency">Currency</string>
+
+    <string-array name="ringscurrency">
+        <item>Dollar</item>
+        <item>KES</item>
+        <item>EURO</item>
+    </string-array>
+
+    <string-array name="ringspricetag">
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+    </string-array>
+
+
+    <string name="Cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="dialogmpesatitle">Enter M-pesa registered mobile number</string>
+    <string name="mobilenohint">254XXXXXXXXX</string>
+    <string name="prefixdialogcode">254</string>
+
+    <string name="delete">Delete</string>
+    <string name="myring">Your Ring(s)</string>
+
+    <string name="deleting">Deleting Ring...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="search">Search</string>
+
+</resources>
